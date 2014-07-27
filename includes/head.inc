@@ -5,6 +5,8 @@
 		<script type='text/javascript' src='menu_jquery.js'></script>
 		<link rel="icon" type="image/x-icon" href="favicon.ico">
 		<link rel="stylesheet" href="style.css" type="text/css"/>
+		<link rel="stylesheet" href="http://www.contactmymp.com/font-awesome/css/font-awesome.min.css">
+
 
 		<!--[if lt IE 9]>
 		<script src="dist/html5shiv.js"></script>

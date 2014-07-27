@@ -5,7 +5,7 @@
   $(function () {
       // start jqtweet!
       JQTWEET.loadTweets();
-  });		
+  });
   </script>
 
   <script type="text/javascript">
@@ -29,6 +29,21 @@ pageTracker._trackPageview();
         <br>
         <br>
         <a href="contact.php"><span class="footericons" aria-hidden="true" data-icon="c">&nbsp;&nbsp;E-mail</span></a> <span class="screen-reader-text">E-mail</span>
+        <br>
+        <br>
+        <p>Also by Rebecca Cordingley:</p>
+        <div class="contact_my_mp_widget">
+          <div class="contact_my_mp_container">
+             <div class="contact_my_mp_link"><a href="http://www.contactmymp.com" target="_blank">Contact My<br>MP Australia</a></div>
+             <div class="contact_my_mp_logo"><img src="images/logo.png"></div>
+          </div>
+          <form id="select_politician" action="http://www.contactmymp.com/select" method="post">
+             <label for="postcode">My Postcode:</label>
+             <br>
+             <input type='number' name='postcode' id='postcode' maxlength='4' placeholder='&#xf041;'>
+             <input type='submit' id='submit' name='submit' value="Go">
+          </form>
+       </div>
       </div>
       </div>
       <div class="desktopfootercol">
@@ -65,7 +80,7 @@ pageTracker._trackPageview();
     </nav>
   <div id="copyright">&copy; 2013 pollietweets.com</div>
 
-    
+
   </footer>
 
 	</body>

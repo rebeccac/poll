@@ -74,7 +74,7 @@ h1 {
     font-weight: 100;
     margin: 0;
     display:inline-block;
-    
+
 }
 
 h1 a,
@@ -266,7 +266,7 @@ background-color:#57ae61
 
 
 .contacticons {
-    text-align: left; 
+    text-align: left;
     padding-left: 0;
     font-size: 25px;
     color: rgba(255,255,255,.5);;
@@ -297,7 +297,7 @@ select {
     border: none;
     padding: 8px;
     font-family: 'Open Sans', sans-serif;
-    -webkit-appearance: none;  
+    -webkit-appearance: none;
     -moz-appearance: none;
     filter: alpha(opacity=0);
     display: inline;
@@ -438,8 +438,8 @@ form#contact legend {
     color: #4b4847;
 }
 
-form#contact fieldset { 
-    width: 100%;  
+form#contact fieldset {
+    width: 100%;
     font-size: 1.1em;
     border: 0;
 
@@ -452,7 +452,7 @@ form#contact fieldset:last-of-type {
 
 form#contact legend {
     font-weight: 400;
-    font-size: 1.35em;    
+    font-size: 1.35em;
 }
 
 form#contact ol {
@@ -606,6 +606,57 @@ footer {
     color: #fff;
 }
 
+/* ********** CONTACT MY MP WIDGET ********** */
+
+.contact_my_mp_widget {
+  position: relative;
+  width: 180px;
+  height: auto;
+  background-color: #fdfdfd;
+  border: solid 1px #ddd; }
+  .contact_my_mp_widget .contact_my_mp_container {
+    width: 100%;
+    height: 50px; }
+    .contact_my_mp_widget .contact_my_mp_container .contact_my_mp_link > a {
+      display: inline;
+      float: left;
+      font-family: Helvetica, sans-serif;
+      font-size: 1em;
+      color: #555;
+      text-decoration: none;
+      margin: 5px 0 0 5px; }
+    .contact_my_mp_widget .contact_my_mp_container .contact_my_mp_logo {
+      display: inline;
+      float: right;
+      width: 75px;
+      margin: 5px 5px 10px 0; }
+  .contact_my_mp_widget label {
+    font-family: Helvetica, sans-serif;
+    font-size: 0.7em;
+    color: #555;
+    margin-left: 10px; }
+  .contact_my_mp_widget #postcode,
+  .contact_my_mp_widget #submit {
+    width: 65px;
+    margin: 2px 10px 5px 10px; }
+  .contact_my_mp_widget #postcode {
+    /*background-color: #ececec;*/
+    background-color: #e1e1e1;
+    border: 0;
+    padding: 4px 0 4px 5px;
+    font-family: FontAwesome;
+    font-size: 1em; }
+  .contact_my_mp_widget #submit {
+    background-color: #339933;
+    border: 0;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    color: #fff;
+ }
+
+/* ********** END OF CONTACT MY MP WIDGET ********** */
+
+
 /* ********** END DESKTOP FOOTER ********** */
 
 
@@ -623,10 +674,10 @@ footer {
 /* ******** MOBILE FONTS ********* */
 
 
-h1, 
+h1,
 h2 {
     font-family: 'Raleway', sans-serif;
-    color: #fff; 
+    color: #fff;
     font-weight: 100;
 }
 
@@ -709,7 +760,7 @@ background:#22313f;
 position:relative
 }
 
-.pullitem, 
+.pullitem,
 #pull a {
 font-weight:700;
 text-decoration:none;
@@ -845,4 +896,17 @@ form#contact ol li.commentslist {
 
 .desktopfootercol {
     display: none;
+}
+
+.contact_my_mp_widget {
+   margin: 0 auto;
+}
+
+.contact_my_mp_widget .contact_my_mp_container .contact_my_mp_link > a {
+   text-align: left;
+}
+
+.contact_my_mp_widget label {
+   float: left;
+   text-align: left;
 }
