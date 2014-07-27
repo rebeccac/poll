@@ -1,0 +1,848 @@
+@charset "UTF-8";
+
+@import "http://fonts.googleapis.com/css?family=Open+Sans:100,400,600,300";
+
+/* ********** ICON FONTS ********** */
+
+@font-face {
+    font-family: 'icomoon';
+    src:url('fonts/icomoon.eot');
+    src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.woff') format('woff'),
+        url('fonts/icomoon.ttf') format('truetype'),
+        url('fonts/icomoon.svg#icomoon') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+[data-icon]:before {
+font-family:'icomoon';
+content:attr(data-icon);
+speak:none;
+font-weight:400;
+font-variant:normal;
+text-transform:none;
+line-height:1;
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale
+}
+
+
+.screen-reader-text {
+position:absolute;
+top:-9999px;
+left:-9999px
+}
+
+/* ********** END ICON FONTS ********** */
+
+
+
+body {
+background:#fff;
+font-family:'Open Sans', sans-serif;
+font-size:12px;
+margin:0;
+padding: 0;
+height:100%;
+color:#333
+}
+
+/*body.loading {
+background-position:center center;
+background-repeat:no-repeat;
+background-image:url(loading.gif)
+}*/
+
+.clear {
+    clear: both;
+}
+
+#mobnav {
+    display:none
+}
+/* ******** DESKTOP FONTS ********* */
+
+h1, h2, h4 {
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+}
+
+h1 {
+    font-size: 6em;
+    padding-left: 20px;
+    font-weight: 100;
+    margin: 0;
+    display:inline-block;
+    
+}
+
+h1 a,
+h1 a:active,
+h1 a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 1.5em;
+    padding-left: 50px;
+    font-weight: 100;
+}
+
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4em;
+    color: #000;
+    font-weight: 100;
+    margin-top: 0;
+    margin-left: 15px;
+    float: left;
+}
+
+h4 {
+    font-size: 1.35em;
+    font-weight: 300;
+}
+
+/* ******** END DESKTOP FONTS ********* */
+
+/* ********** DESKTOP HEADER ********** */
+
+header,
+.main,
+.sub,
+#bar,
+#nav {
+    background-color: #22313f;
+}
+
+header {
+    width: 100%;
+    margin: 0;
+}
+
+header .main {
+    height: 110px;
+    line-height: 110px;
+    margin-bottom: 0;
+}
+
+header .sub {
+    height: 60px;
+    margin-top: 0;
+}
+
+#headerimg {
+    padding-left: 20px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+img.mobile {
+    display: none;
+}
+
+img.desktop {
+    display: inline;
+}
+
+/* ********** END DESKTOP HEADER ********** */
+
+
+
+/* ********** DESKTOP MENU ********** */
+
+nav {
+margin-bottom:20px;
+display:inline-block
+}
+
+ul {
+margin:0;
+padding:0
+}
+
+/* ********** MENU COLOURS ********** */
+
+.orange {
+background-color:#f29d33;
+}
+
+.red {
+background-color:#e74c3c
+}
+
+.purple {
+background-color:#9b59b5
+}
+
+.blue {
+background-color:#2980b9
+}
+
+.green {
+background-color:#57ae61
+}
+
+/* ********** END MENU COLOURS ********** */
+
+
+#bar {
+    width: 100%;
+    height: 35px;
+}
+
+#nav{
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    list-style:none;
+    float:left;
+    font-size: 1.2em;
+    font-weight: 700;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    position:relative;
+    z-index: 999;
+}
+#nav li{
+    float:left;
+
+    position:relative;
+}
+#nav a{
+    width: 75px;
+    line-height: 30px;
+    display:inline-block;
+    padding:0;
+    color:#fff;
+    text-decoration:none;
+    text-align: center;
+}
+#nav a:hover{
+    color:#fff;
+}
+
+/*--- DROPDOWN ---*/
+#nav ul{
+    background:#fff; /* Adding a background makes the dropdown work properly in IE7+. Make this as close to your page's background as possible (i.e. white page == white background). */
+    background:rgba(255,255,255,0);  /*But! Let's make the background fully transparent where we can, we don't actually want to see it if we can help it... */
+    list-style:none;
+    display: none;
+    position:absolute;
+    left:-9999px;  /*Hide off-screen when not needed (this is more accessible than display:none;) */
+    z-index: 999;
+}
+
+#nav ul li{
+    padding-top:1px; /* Introducing a padding between the li and the a give the illusion spaced items */
+    border-bottom: 1px solid #fff;
+    float:none;
+}
+
+#nav ul li:last-child {
+    border-bottom: 0;
+}
+
+#nav ul a{
+    width: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    font-size: 0.8em;
+    white-space:nowrap;  /*Stop text wrapping and creating multi-line dropdown items */
+}
+#nav li:hover>ul{ /* Display the dropdown on hover */
+    left: 0;
+    display: block;
+}
+
+
+#nav li:hover ul a{ /* The persistent hover state does however create a global style for links even before they're hovered. Here we undo these effects. */
+    text-decoration:none;
+}
+
+
+.contacticons {
+    text-align: left; 
+    padding-left: 0;
+    font-size: 25px;
+    color: rgba(255,255,255,.5);;
+}
+
+/* ********** END DESKTOP MENU ********** */
+
+
+
+
+/* ******** DESKTOP RECENT TWEETERS MENU ********* */
+
+#recenttweeters {
+    margin-top: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    color: #000;
+    float: right;
+}
+
+form {
+    display: inline;
+}
+
+select {
+    margin-left: 10px;
+    background-color: #c7dbf2;
+    border: none;
+    padding: 8px;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-appearance: none;  
+    -moz-appearance: none;
+    filter: alpha(opacity=0);
+    display: inline;
+}
+
+header input[type=button] {
+    border: none;
+    background-color: #ccc;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    padding: 5px;
+    color: #000;
+}
+
+select:focus {
+    outline: none;
+}
+
+/* ******** END DESKTOP RECENT TWEETERS MENU ********* */
+
+ /* ********** END DESKTOP HEADER ********** */
+
+#tweetscontainer {
+    height: auto;
+    min-height: 600px;
+}
+
+
+/* ********** TWEET BOX ********** */
+
+#jstwitter {
+position:relative
+}
+
+#jstwitter .item {
+overflow:hidden;
+background:#ecf0f1;
+border:1px solid #ccc
+}
+
+#jstwitter .tweet-wrapper {
+padding:10px;
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+box-sizing:border-box;
+line-height:16px
+}
+
+#jstwitter .item a {
+text-decoration:none;
+color:#03a8e5
+}
+
+#jstwitter .item a:hover {
+text-decoration:underline
+}
+
+#jstwitter .item img {
+width:100%;
+border-style: none;
+}
+
+#jstwitter .item .text {
+display:block
+}
+
+#jstwitter .item .date-time {
+margin-top:5px
+}
+
+#jstwitter .item .time,#jstwitter .tweet {
+font-style:italic;
+color:#666
+}
+
+#jstwitter .header {
+position:relative;
+height:50px;
+margin-bottom:5px
+}
+
+#jstwitter .avatar {
+width:48px;
+height:48px;
+float:left;
+clear:both;
+margin-right:10px
+}
+
+#jstwitter .header .name {
+position:absolute;
+height:1.1em;
+top:50%;
+margin-top:-.55em
+}
+
+#jstwitter .item .name a {
+text-decoration:none;
+color:#444;
+font-size:1.1em;
+font-weight:800
+}
+
+#jstwitter .item .name a:hover {
+color:#03a8e5;
+text-decoration:underline
+}
+
+/* ********** END TWEET BOX ********** */
+
+
+
+/* ********** CONTACT FORM ********** */
+
+#contactform {
+    margin-bottom: 20px;
+    width: 75%;
+    background-color: #fff;
+    height: auto;
+    padding: 0;
+}
+
+#contactform h3 {
+    color: #4b4847;
+    font-size: 2.7em;
+    font-weight: 300;
+}
+
+form#contact {
+    margin-top: 20px;
+    display: block;
+}
+
+
+form#contact fieldset,
+form#contact legend {
+    font-family: 'Open Sans', sans-serif;
+    color: #4b4847;
+}
+
+form#contact fieldset { 
+    width: 100%;  
+    font-size: 1.1em;
+    border: 0;
+
+}
+
+form#contact fieldset:last-of-type {
+    margin-bottom: 0;
+    display: inline-block;
+}
+
+form#contact legend {
+    font-weight: 400;
+    font-size: 1.35em;    
+}
+
+form#contact ol {
+    margin: 0;
+    padding: 0;
+}
+
+form#contact ol li.details {
+    width: 40%;
+    padding: 5px 10px;
+}
+
+form#contact ol li.comments  {
+    width: 80%;
+    padding: 5px 20px;
+}
+
+form#contact ol li{
+    min-width: 250px;
+    background-color: #5c7c9d;
+    /*background: rgba(255,255,255,.3);*/
+    background-color: rgba(199, 193, 189, 0.5);
+
+    border-color: #c1d7ec;
+    border-color: rgba(255,255,255,.6);
+    border-style: solid;
+    border-width: 2px;
+    line-height: 30px;
+    list-style: none;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+form#contact fieldset label {
+    color: #000;
+    display: inline-block;
+}
+
+form#contact fieldset label:hover {
+    cursor: pointer;
+}
+
+form#contact input,
+form#contact fieldset label {
+    width: 95%;
+    /*min-width: 245px;*/
+    padding: 3px 5px 3px 5px;
+    border: 0;
+}
+
+form#contact textarea {
+    width: 98%;
+    /*min-width: 245px;*/
+    padding: 3px 5px 3px 5px;
+    overflow: scroll;
+    border: 0;
+}
+
+form#contact input:focus,
+form#contact textarea:focus {
+    outline: none;
+}
+
+
+form#contact input[type=submit] {
+    background-color: rgba(199, 193, 189, 1);
+    width: 80px;
+    padding: 7px 0 7px 0;
+    /*margin-left: 70px;*/
+}
+
+label {
+    display: inline;
+}
+
+.errors {
+    display:block;
+    color: #ff0000;
+    font-weight: 300;
+}
+
+.thankyou {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4em;
+    color: #000;
+    font-weight: 100;
+}
+
+/* ********** END CONTACT FORM ********** */
+
+
+/* ********** DESKTOP FOOTER ********** */
+
+footer {
+    height: auto;
+    width: 100%;
+    background-color: #22313f;
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+}
+
+#footernav {
+    width: 100%;
+    padding-left: 0;
+}
+
+.footericons {
+    font-size: 1.3em;
+}
+
+.footercol,
+.desktopfootercol {
+    font-size: 1.1em;
+    padding-left: 0;
+    width: 33%;
+    margin-top: 0;
+    padding-top: 0;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.footercol a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.desktopfootercol ul li {
+    list-style: none;
+}
+
+.desktopfootercol ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.desktopfootercol ul li a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+.innercol {
+    padding-left: 20px;
+}
+
+#copyright {
+    width: 100%;
+    padding-bottom: 3px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    color: #fff;
+}
+
+/* ********** END DESKTOP FOOTER ********** */
+
+
+
+
+
+/* ******** MAX-WIDTH 800PX ********* */
+
+@media only screen and (max-width: 800px) {
+
+#bar {
+	display: none;
+}
+
+/* ******** MOBILE FONTS ********* */
+
+
+h1, 
+h2 {
+    font-family: 'Raleway', sans-serif;
+    color: #fff; 
+    font-weight: 100;
+}
+
+h1 {
+    font-size: 2.8em;
+    padding-left: 20px;
+    margin: 0;
+    display:inline-block;
+}
+
+h1 a,
+h1 a:active,
+h1 a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 1.2em;
+    margin-left: 25px;
+}
+
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    color: #000;
+    font-weight: 100;
+    margin-top: 0;
+    margin-left: 15px;
+    float: left;
+}
+
+/* ******** END MOBILE FONTS ********* */
+
+
+/* ********** MOBILE HEADER ********** */
+
+header {
+    background-color: #22313f;
+    width: 100%;
+    margin: 0;
+}
+
+header .main {
+    height: 36px;
+    line-height: 36px;
+}
+
+header .sub {
+    height: 30px;
+    line-height: 30px;
+}
+
+
+#headerimg {
+    padding-left: 15px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+img.mobile {
+    display: inline;
+}
+
+img.desktop {
+    display: none;
+}
+/* ********** END OF MOBILE HEADER ********** */
+
+
+/* ********** MENU PULL TAB ********** */
+
+#pull {
+height:3em;
+display:block;
+margin-bottom:10px;
+padding-left:10px;
+border:0;
+background:#22313f;
+position:relative
+}
+
+.pullitem, 
+#pull a {
+font-weight:700;
+text-decoration:none;
+font-family:'Open Sans',sans-serif;
+color:#fff
+}
+
+.pullitem {
+line-height:3em;
+font-size:1em;
+}
+
+#pull .left {
+float:left;
+padding-right:10px;
+font-size:18px;
+}
+
+/* ********** END MENU PULL TAB ********** */
+
+
+/* ********** MOBILE MENU ********** */
+
+#nav {
+display:none
+}
+
+#mobnav,
+#mobnav ul,
+#mobnav li,
+#mobnav a {
+display:block;
+z-index:999;
+margin:0;
+padding:0;
+border:0;
+list-style:none;
+font-weight:400;
+text-decoration:none;
+line-height:1;
+font-family:'Open Sans',sans-serif;
+font-size:14px;
+position:relative
+}
+
+#mobnav a {
+line-height:1.3
+}
+
+#mobnav {
+width:100%
+}
+
+#mobnav > ul > li > a {
+padding-right:40px;
+font-size:25px;
+font-weight:700;
+display:block;
+background:#22313f;
+color:#fff;
+border-bottom:1px solid #34495e
+}
+
+#mobnav > ul > li > a > span {
+padding:10px;
+display:block;
+font-size:13px;
+font-weight:300
+}
+
+#mobnav > ul > li > a:hover {
+text-decoration:none
+}
+
+#mobnav > ul > li.active {
+border-bottom:none
+}
+
+#mobnav > ul > li.active > a {
+color:#fff
+}
+
+#mobnav span.cnt {
+position:absolute;
+top:8px;
+right:15px;
+padding:0;
+margin:0;
+background:none
+}
+
+#mobnav ul ul {
+display:none
+}
+
+#mobnav ul ul li {
+border:1px solid #bebebe;
+border-top:0
+}
+
+#mobnav ul ul a {
+padding:10px;
+display:block;
+color:#fff;
+font-size:13px
+}
+
+/* ********** END MOBILE MENU ********** */
+
+
+/* ********** MOBILE CONTACT FORM ********** */
+#contactform {
+    width: 90%;
+}
+
+form#contact ol li.detailslist,
+form#contact ol li.commentslist {
+    width: 80%;
+    padding: 5px 10px;
+}
+
+/* ********** END MOBILE CONTACT FORM ********** */
+
+/* ********** MOBILE FOOTER ********** */
+
+.footercol {
+    width: 100%;
+}
+
+.innercol {
+    text-align: center;
+}
+
+.desktopfootercol {
+    display: none;
+}
